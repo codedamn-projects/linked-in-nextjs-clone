@@ -8,9 +8,23 @@ This is one of the many projects available on [codedamn](https://codedamn.com/pr
 ## Project Overview
 
 NOTE : For mobile views look at the `/designs` folder
-### Landing Pages
+### Landing Page
 
-You have to try and recreate the discord login page all the assets are present at the `/assets` folder. You don't need to scout for assets anywhere else. 
+The landing page will be shown in the `/` route. 
+
+![main image](https://raw.githubusercontent.com/codedamn-projects/linked-in-nextjs-clone/master/designs/Linked%20In%20Clone%20Home%20%5BDesktop%5D.png)
+
+### Register
+
+The following should be implement at the `/register` route.
+
+![register page](https://raw.githubusercontent.com/codedamn-projects/linked-in-nextjs-clone/master/designs/Register%20%5BDesktop%5D%20%5BLight%5D.png)
+
+### Sign In
+
+The following should be implement in the `/sign-in` route.
+
+![sign in](https://raw.githubusercontent.com/codedamn-projects/linked-in-nextjs-clone/master/designs/Sign%20In%20%5BDesktop%5D%20%5BLight%5D.png)
 ### Dashboard
 
 The dashboard should be at URL `/dashboard` 
@@ -27,10 +41,60 @@ In the create post modal the user should be able to enter their text and Sharing
 
 ![post having an image](https://raw.githubusercontent.com/codedamn-projects/linked-in-nextjs-clone/master/designs/Showing%20Image%20in%20Dashboard%20%5BDesktop%5D%20%5BDark%5D.png)
 
-## Icons 
-The project uses `@mui/icons-material`. You can use their [website](https://mui.com/components/material-icons/) to pick up icons for the project. 
+## API Routes 
+
+### `/api/auth/signin`
+
+To verify the user credentials on Sign In 
+
+### `/api/auth/register` 
+
+To register a new user and add the document to the database
+### `/api/posts`
+
+The code to be written in `/api/posts/index.js`
+
+Should return the json of the posts, so that they can be shown in the `/dashboard`
+
+### `/api/posts/[id]`
+
+Required to delete the post. So on API call the post should be deleted on the database and removed from the UI
+
+
+### MongoDB user document
+```
+{
+    _id: ObjectId(),
+    name: <string>,
+    email: <string>,
+    password: <string>,
+    timestamp: <date>
+}
+```
+
+### MongoDB Post Document
+```
+{
+    _id: ObjectId(),
+    name: <string>,
+    message: <string>,
+    imageURL: <string>,
+    likes: <int>
+}
+```
+
+### Ports 
+The Codedamn Playgrounds exposes only `1337` and `1338` ports on the internet. So you'll be using `localhost` for connecting to the mongodb instance as they are hosted on the same docker container. You can specify it as `localhost:27017` or simple write `localhost`. 
+
+## Recommended Technologies 
+
+1. Mongoose for mongodb object modelling and effective type system 
+1. Tailwind CSS for User Interface
+1. `@mui/icons-material`. You can use their [website](https://mui.com/components/material-icons/) to pick up icons for the project. 
 
 There is no restriction for using mui, you can free to choose any other icons for your project.
+
+
 ## Instructions
 
 Your challenge is to build out this project and get it looking as close to the design as possible.
@@ -47,6 +111,7 @@ Want some support on the challenge? [Join our discord community](https://cdm.sh/
 
 There is no limit you can go beyond the mentioned criteria and create additional functionalities
 
+
 ## Where to find everything
 
 Your task is to build out the project as per the provided screenshots. You will find both a mobile and a desktop version of the design.
@@ -60,6 +125,7 @@ There is also a `style-guide.html` file containing the information you'll need, 
 ## Want to do more
 
 1. You can build OAuth2 for Sign In and Registration
+1. Creating the network page and having Connections
 
 ## Send feedback!
 
