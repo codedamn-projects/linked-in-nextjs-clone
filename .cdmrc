@@ -1,2 +1,2 @@
-tabs: ['pages/index.js']
+tabs: ['pages/index.js', 'README.md']
 terminal-one: yarn && yarn dev
