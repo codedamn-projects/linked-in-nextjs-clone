@@ -1,4 +1,4 @@
-# Codedamn Projects - Discord UI Clone
+# Codedamn Projects - LinkedIn Clone
 ![main image](https://raw.githubusercontent.com/codedamn-projects/linked-in-nextjs-clone/master/designs/Linked%20In%20Clone%20Home%20%5BDesktop%5D.png)
 
 ## Hello developer!
