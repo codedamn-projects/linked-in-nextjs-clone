@@ -59,7 +59,7 @@ There is also a `style-guide.html` file containing the information you'll need, 
 
 ## Want to do more
 
-1. You can build OAuth2 for 
+1. You can build OAuth2 for Sign In and Registration
 
 ## Send feedback!
 
